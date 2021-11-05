@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/scaffold_high_railing.obj-c8ad9bf595f771e9ccf19b3fb4beacee.mesh"
+
+[deps]
+
+files=[ "res://.import/scaffold_high_railing.obj-c8ad9bf595f771e9ccf19b3fb4beacee.mesh" ]
+
+source_file="res://Models/obj/scaffold_high_railing.obj"
+dest_files=[ "res://.import/scaffold_high_railing.obj-c8ad9bf595f771e9ccf19b3fb4beacee.mesh", "res://.import/scaffold_high_railing.obj-c8ad9bf595f771e9ccf19b3fb4beacee.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

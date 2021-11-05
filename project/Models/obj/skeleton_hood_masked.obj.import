@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/skeleton_hood_masked.obj-e2dc435e8a0e4aaaa598e2e3a30c8c63.mesh"
+
+[deps]
+
+files=[ "res://.import/skeleton_hood_masked.obj-e2dc435e8a0e4aaaa598e2e3a30c8c63.mesh" ]
+
+source_file="res://Models/obj/skeleton_hood_masked.obj"
+dest_files=[ "res://.import/skeleton_hood_masked.obj-e2dc435e8a0e4aaaa598e2e3a30c8c63.mesh", "res://.import/skeleton_hood_masked.obj-e2dc435e8a0e4aaaa598e2e3a30c8c63.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

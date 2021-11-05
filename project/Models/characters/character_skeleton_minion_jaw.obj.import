@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/character_skeleton_minion_jaw.obj-633e785d1c970a5fa2644e21dba73110.mesh"
+
+[deps]
+
+files=[ "res://.import/character_skeleton_minion_jaw.obj-633e785d1c970a5fa2644e21dba73110.mesh" ]
+
+source_file="res://Models/characters/character_skeleton_minion_jaw.obj"
+dest_files=[ "res://.import/character_skeleton_minion_jaw.obj-633e785d1c970a5fa2644e21dba73110.mesh", "res://.import/character_skeleton_minion_jaw.obj-633e785d1c970a5fa2644e21dba73110.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

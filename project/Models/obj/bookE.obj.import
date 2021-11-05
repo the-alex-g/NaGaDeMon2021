@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/bookE.obj-d7bef4986e1e53cbddb121f8cc13f419.mesh"
+
+[deps]
+
+files=[ "res://.import/bookE.obj-d7bef4986e1e53cbddb121f8cc13f419.mesh" ]
+
+source_file="res://Models/obj/bookE.obj"
+dest_files=[ "res://.import/bookE.obj-d7bef4986e1e53cbddb121f8cc13f419.mesh", "res://.import/bookE.obj-d7bef4986e1e53cbddb121f8cc13f419.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

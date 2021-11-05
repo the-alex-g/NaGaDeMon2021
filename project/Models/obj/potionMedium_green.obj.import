@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/potionMedium_green.obj-90a4f0923284e182268d30ba540bd1bb.mesh"
+
+[deps]
+
+files=[ "res://.import/potionMedium_green.obj-90a4f0923284e182268d30ba540bd1bb.mesh" ]
+
+source_file="res://Models/obj/potionMedium_green.obj"
+dest_files=[ "res://.import/potionMedium_green.obj-90a4f0923284e182268d30ba540bd1bb.mesh", "res://.import/potionMedium_green.obj-90a4f0923284e182268d30ba540bd1bb.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

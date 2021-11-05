@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/chest_uncommon.obj-5a030a205fba16a4d9d8584bef5ae98a.mesh"
+
+[deps]
+
+files=[ "res://.import/chest_uncommon.obj-5a030a205fba16a4d9d8584bef5ae98a.mesh" ]
+
+source_file="res://Models/obj/chest_uncommon.obj"
+dest_files=[ "res://.import/chest_uncommon.obj-5a030a205fba16a4d9d8584bef5ae98a.mesh", "res://.import/chest_uncommon.obj-5a030a205fba16a4d9d8584bef5ae98a.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

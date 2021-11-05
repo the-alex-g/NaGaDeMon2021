@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/arrow_green_broken_half.obj-ca67addd7db522f87bb4914e7fc5161b.mesh"
+
+[deps]
+
+files=[ "res://.import/arrow_green_broken_half.obj-ca67addd7db522f87bb4914e7fc5161b.mesh" ]
+
+source_file="res://Models/obj/arrow_green_broken_half.obj"
+dest_files=[ "res://.import/arrow_green_broken_half.obj-ca67addd7db522f87bb4914e7fc5161b.mesh", "res://.import/arrow_green_broken_half.obj-ca67addd7db522f87bb4914e7fc5161b.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/skull_broken.obj-cac39ac05e868d418ebc9a523ea0db04.mesh"
+
+[deps]
+
+files=[ "res://.import/skull_broken.obj-cac39ac05e868d418ebc9a523ea0db04.mesh" ]
+
+source_file="res://Models/obj/skull_broken.obj"
+dest_files=[ "res://.import/skull_broken.obj-cac39ac05e868d418ebc9a523ea0db04.mesh", "res://.import/skull_broken.obj-cac39ac05e868d418ebc9a523ea0db04.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

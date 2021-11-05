@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/skeleton_bow.obj-8959928fb82294664ade2d979797f209.mesh"
+
+[deps]
+
+files=[ "res://.import/skeleton_bow.obj-8959928fb82294664ade2d979797f209.mesh" ]
+
+source_file="res://Models/obj/skeleton_bow.obj"
+dest_files=[ "res://.import/skeleton_bow.obj-8959928fb82294664ade2d979797f209.mesh", "res://.import/skeleton_bow.obj-8959928fb82294664ade2d979797f209.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

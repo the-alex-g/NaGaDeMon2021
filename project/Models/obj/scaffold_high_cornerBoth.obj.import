@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/scaffold_high_cornerBoth.obj-1f8954840eade57d40f705e4ec482b6f.mesh"
+
+[deps]
+
+files=[ "res://.import/scaffold_high_cornerBoth.obj-1f8954840eade57d40f705e4ec482b6f.mesh" ]
+
+source_file="res://Models/obj/scaffold_high_cornerBoth.obj"
+dest_files=[ "res://.import/scaffold_high_cornerBoth.obj-1f8954840eade57d40f705e4ec482b6f.mesh", "res://.import/scaffold_high_cornerBoth.obj-1f8954840eade57d40f705e4ec482b6f.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

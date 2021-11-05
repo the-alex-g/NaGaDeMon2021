@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/wallIntersection.obj-246f0cffb8a0b9201d77cc771128575f.mesh"
+
+[deps]
+
+files=[ "res://.import/wallIntersection.obj-246f0cffb8a0b9201d77cc771128575f.mesh" ]
+
+source_file="res://Models/obj/wallIntersection.obj"
+dest_files=[ "res://.import/wallIntersection.obj-246f0cffb8a0b9201d77cc771128575f.mesh", "res://.import/wallIntersection.obj-246f0cffb8a0b9201d77cc771128575f.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

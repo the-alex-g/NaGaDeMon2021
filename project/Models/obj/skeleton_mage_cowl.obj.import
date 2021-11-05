@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/skeleton_mage_cowl.obj-15ffaa8511241ba371c0d77f5e97ff17.mesh"
+
+[deps]
+
+files=[ "res://.import/skeleton_mage_cowl.obj-15ffaa8511241ba371c0d77f5e97ff17.mesh" ]
+
+source_file="res://Models/obj/skeleton_mage_cowl.obj"
+dest_files=[ "res://.import/skeleton_mage_cowl.obj-15ffaa8511241ba371c0d77f5e97ff17.mesh", "res://.import/skeleton_mage_cowl.obj-15ffaa8511241ba371c0d77f5e97ff17.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

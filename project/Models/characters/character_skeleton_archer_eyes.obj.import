@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/character_skeleton_archer_eyes.obj-5c47d8d67656d460b4ffd41390aafbfc.mesh"
+
+[deps]
+
+files=[ "res://.import/character_skeleton_archer_eyes.obj-5c47d8d67656d460b4ffd41390aafbfc.mesh" ]
+
+source_file="res://Models/characters/character_skeleton_archer_eyes.obj"
+dest_files=[ "res://.import/character_skeleton_archer_eyes.obj-5c47d8d67656d460b4ffd41390aafbfc.mesh", "res://.import/character_skeleton_archer_eyes.obj-5c47d8d67656d460b4ffd41390aafbfc.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/floorDecoration_woodRight.obj-1a1fca9c291ecf0fbcc234da3ee8d5d1.mesh"
+
+[deps]
+
+files=[ "res://.import/floorDecoration_woodRight.obj-1a1fca9c291ecf0fbcc234da3ee8d5d1.mesh" ]
+
+source_file="res://Models/obj/floorDecoration_woodRight.obj"
+dest_files=[ "res://.import/floorDecoration_woodRight.obj-1a1fca9c291ecf0fbcc234da3ee8d5d1.mesh", "res://.import/floorDecoration_woodRight.obj-1a1fca9c291ecf0fbcc234da3ee8d5d1.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/character_skeleton_archer_hood_broken.obj-58a8f59f36b9f70aae129772d429a615.mesh"
+
+[deps]
+
+files=[ "res://.import/character_skeleton_archer_hood_broken.obj-58a8f59f36b9f70aae129772d429a615.mesh" ]
+
+source_file="res://Models/characters/character_skeleton_archer_hood_broken.obj"
+dest_files=[ "res://.import/character_skeleton_archer_hood_broken.obj-58a8f59f36b9f70aae129772d429a615.mesh", "res://.import/character_skeleton_archer_hood_broken.obj-58a8f59f36b9f70aae129772d429a615.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

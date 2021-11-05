@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/knightHeadC.obj-b6b42520fc169e21ed423828e9f5454a.mesh"
+
+[deps]
+
+files=[ "res://.import/knightHeadC.obj-b6b42520fc169e21ed423828e9f5454a.mesh" ]
+
+source_file="res://Models/characters/extra heads/knightHeadC.obj"
+dest_files=[ "res://.import/knightHeadC.obj-b6b42520fc169e21ed423828e9f5454a.mesh", "res://.import/knightHeadC.obj-b6b42520fc169e21ed423828e9f5454a.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

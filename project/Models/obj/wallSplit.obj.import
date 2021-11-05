@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/wallSplit.obj-49b8d1f5694026de5037bd5d3832a731.mesh"
+
+[deps]
+
+files=[ "res://.import/wallSplit.obj-49b8d1f5694026de5037bd5d3832a731.mesh" ]
+
+source_file="res://Models/obj/wallSplit.obj"
+dest_files=[ "res://.import/wallSplit.obj-49b8d1f5694026de5037bd5d3832a731.mesh", "res://.import/wallSplit.obj-49b8d1f5694026de5037bd5d3832a731.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

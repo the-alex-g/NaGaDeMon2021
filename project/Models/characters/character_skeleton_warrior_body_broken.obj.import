@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/character_skeleton_warrior_body_broken.obj-7f67e8dc5ba0c691987d9860bf042fba.mesh"
+
+[deps]
+
+files=[ "res://.import/character_skeleton_warrior_body_broken.obj-7f67e8dc5ba0c691987d9860bf042fba.mesh" ]
+
+source_file="res://Models/characters/character_skeleton_warrior_body_broken.obj"
+dest_files=[ "res://.import/character_skeleton_warrior_body_broken.obj-7f67e8dc5ba0c691987d9860bf042fba.mesh", "res://.import/character_skeleton_warrior_body_broken.obj-7f67e8dc5ba0c691987d9860bf042fba.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

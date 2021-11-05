@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/mageHairA.obj-908f5ab6aaa82596e688e7de93f0f81c.mesh"
+
+[deps]
+
+files=[ "res://.import/mageHairA.obj-908f5ab6aaa82596e688e7de93f0f81c.mesh" ]
+
+source_file="res://Models/characters/extra heads/mageHairA.obj"
+dest_files=[ "res://.import/mageHairA.obj-908f5ab6aaa82596e688e7de93f0f81c.mesh", "res://.import/mageHairA.obj-908f5ab6aaa82596e688e7de93f0f81c.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

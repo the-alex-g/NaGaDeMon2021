@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/rogueHeadB.obj-98e53a80598e913dd9f4dcfba448ae49.mesh"
+
+[deps]
+
+files=[ "res://.import/rogueHeadB.obj-98e53a80598e913dd9f4dcfba448ae49.mesh" ]
+
+source_file="res://Models/characters/extra heads/rogueHeadB.obj"
+dest_files=[ "res://.import/rogueHeadB.obj-98e53a80598e913dd9f4dcfba448ae49.mesh", "res://.import/rogueHeadB.obj-98e53a80598e913dd9f4dcfba448ae49.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

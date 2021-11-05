@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/axe_uncommon.obj-09b72487741ee097d6a33ff5c4a906ee.mesh"
+
+[deps]
+
+files=[ "res://.import/axe_uncommon.obj-09b72487741ee097d6a33ff5c4a906ee.mesh" ]
+
+source_file="res://Models/obj/axe_uncommon.obj"
+dest_files=[ "res://.import/axe_uncommon.obj-09b72487741ee097d6a33ff5c4a906ee.mesh", "res://.import/axe_uncommon.obj-09b72487741ee097d6a33ff5c4a906ee.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

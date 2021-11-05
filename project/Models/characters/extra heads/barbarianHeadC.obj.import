@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/barbarianHeadC.obj-b6df9ca47535e815ffb71e9cf3048515.mesh"
+
+[deps]
+
+files=[ "res://.import/barbarianHeadC.obj-b6df9ca47535e815ffb71e9cf3048515.mesh" ]
+
+source_file="res://Models/characters/extra heads/barbarianHeadC.obj"
+dest_files=[ "res://.import/barbarianHeadC.obj-b6df9ca47535e815ffb71e9cf3048515.mesh", "res://.import/barbarianHeadC.obj-b6df9ca47535e815ffb71e9cf3048515.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

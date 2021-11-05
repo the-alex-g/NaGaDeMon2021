@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/scaffold_small_low_railing.obj-4c6961b61423fb8ba26b3525b68a4d54.mesh"
+
+[deps]
+
+files=[ "res://.import/scaffold_small_low_railing.obj-4c6961b61423fb8ba26b3525b68a4d54.mesh" ]
+
+source_file="res://Models/obj/scaffold_small_low_railing.obj"
+dest_files=[ "res://.import/scaffold_small_low_railing.obj-4c6961b61423fb8ba26b3525b68a4d54.mesh", "res://.import/scaffold_small_low_railing.obj-4c6961b61423fb8ba26b3525b68a4d54.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

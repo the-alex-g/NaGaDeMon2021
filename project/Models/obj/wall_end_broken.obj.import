@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/wall_end_broken.obj-d327cc8d4a74de6a0d46d6bd3db376e1.mesh"
+
+[deps]
+
+files=[ "res://.import/wall_end_broken.obj-d327cc8d4a74de6a0d46d6bd3db376e1.mesh" ]
+
+source_file="res://Models/obj/wall_end_broken.obj"
+dest_files=[ "res://.import/wall_end_broken.obj-d327cc8d4a74de6a0d46d6bd3db376e1.mesh", "res://.import/wall_end_broken.obj-d327cc8d4a74de6a0d46d6bd3db376e1.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

@@ -1,0 +1,83 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Models/characters/character_knightHelmetVisor.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://Models/characters/character_knightArmLeft.obj" type="ArrayMesh" id=2]
+[ext_resource path="res://Models/characters/character_knightHead.obj" type="ArrayMesh" id=3]
+[ext_resource path="res://Models/characters/character_knightArmRight.obj" type="ArrayMesh" id=4]
+[ext_resource path="res://Models/obj/sword_rare.obj" type="ArrayMesh" id=5]
+[ext_resource path="res://Models/obj/shield_rare.obj" type="ArrayMesh" id=6]
+[ext_resource path="res://Models/characters/character_knightBody.obj" type="ArrayMesh" id=7]
+[ext_resource path="res://Models/obj/quiver_empty.obj" type="ArrayMesh" id=8]
+[ext_resource path="res://Player/Player.gd" type="Script" id=9]
+
+[sub_resource type="CylinderShape" id=1]
+radius = 0.58094
+
+[sub_resource type="AnimationNodeBlendTree" id=2]
+graph_offset = Vector2( 0, 103.5 )
+
+[node name="Player" type="KinematicBody"]
+script = ExtResource( 9 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.964361, 0 )
+shape = SubResource( 1 )
+
+[node name="Body" type="MeshInstance" parent="."]
+mesh = ExtResource( 7 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+
+[node name="Quiver" type="MeshInstance" parent="Body"]
+transform = Transform( -0.860866, -0.508831, -8.74228e-08, -0.508831, 0.860866, 0, 7.52593e-08, 4.44834e-08, -1, 0.0215433, 0.580091, -0.429851 )
+mesh = ExtResource( 8 )
+material/0 = null
+material/1 = null
+
+[node name="RightArm" type="MeshInstance" parent="Body"]
+mesh = ExtResource( 4 )
+material/0 = null
+material/1 = null
+material/2 = null
+
+[node name="Weapon" type="MeshInstance" parent="Body/RightArm"]
+transform = Transform( -4.37053e-08, 7.27017e-10, 1, 0.8271, 0.562054, 3.57401e-08, -0.562054, 0.8271, -2.51661e-08, -0.46109, 0.283041, 0.0555552 )
+mesh = ExtResource( 5 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+
+[node name="LeftArm" type="MeshInstance" parent="Body"]
+mesh = ExtResource( 2 )
+material/0 = null
+material/1 = null
+material/2 = null
+
+[node name="Shield" type="MeshInstance" parent="Body/LeftArm"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.439183, 0.371568, 0.000667691 )
+mesh = ExtResource( 6 )
+material/0 = null
+material/1 = null
+material/2 = null
+
+[node name="Head" type="MeshInstance" parent="Body"]
+mesh = ExtResource( 3 )
+material/0 = null
+material/1 = null
+material/2 = null
+
+[node name="Helmet" type="MeshInstance" parent="Body/Head"]
+mesh = ExtResource( 1 )
+material/0 = null
+material/1 = null
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource( 2 )
+anim_player = NodePath("../AnimationPlayer")

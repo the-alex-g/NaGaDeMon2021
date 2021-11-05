@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/character_skeleton_minion_head_broken.obj-c65b3d3554eff6458bcc6e6ef6e923d6.mesh"
+
+[deps]
+
+files=[ "res://.import/character_skeleton_minion_head_broken.obj-c65b3d3554eff6458bcc6e6ef6e923d6.mesh" ]
+
+source_file="res://Models/characters/character_skeleton_minion_head_broken.obj"
+dest_files=[ "res://.import/character_skeleton_minion_head_broken.obj-c65b3d3554eff6458bcc6e6ef6e923d6.mesh", "res://.import/character_skeleton_minion_head_broken.obj-c65b3d3554eff6458bcc6e6ef6e923d6.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

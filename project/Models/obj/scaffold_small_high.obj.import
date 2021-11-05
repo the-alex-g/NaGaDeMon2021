@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/scaffold_small_high.obj-6997bff643a3ee9d11d65f703211413f.mesh"
+
+[deps]
+
+files=[ "res://.import/scaffold_small_high.obj-6997bff643a3ee9d11d65f703211413f.mesh" ]
+
+source_file="res://Models/obj/scaffold_small_high.obj"
+dest_files=[ "res://.import/scaffold_small_high.obj-6997bff643a3ee9d11d65f703211413f.mesh", "res://.import/scaffold_small_high.obj-6997bff643a3ee9d11d65f703211413f.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

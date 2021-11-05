@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/skeleton_helmet_full.obj-9174c3191d7d948112cc80d6523d925f.mesh"
+
+[deps]
+
+files=[ "res://.import/skeleton_helmet_full.obj-9174c3191d7d948112cc80d6523d925f.mesh" ]
+
+source_file="res://Models/obj/skeleton_helmet_full.obj"
+dest_files=[ "res://.import/skeleton_helmet_full.obj-9174c3191d7d948112cc80d6523d925f.mesh", "res://.import/skeleton_helmet_full.obj-9174c3191d7d948112cc80d6523d925f.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

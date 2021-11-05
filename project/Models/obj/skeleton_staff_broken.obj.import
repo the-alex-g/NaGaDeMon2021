@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/skeleton_staff_broken.obj-5a73b6ff34942971342e80510f22d5e0.mesh"
+
+[deps]
+
+files=[ "res://.import/skeleton_staff_broken.obj-5a73b6ff34942971342e80510f22d5e0.mesh" ]
+
+source_file="res://Models/obj/skeleton_staff_broken.obj"
+dest_files=[ "res://.import/skeleton_staff_broken.obj-5a73b6ff34942971342e80510f22d5e0.mesh", "res://.import/skeleton_staff_broken.obj-5a73b6ff34942971342e80510f22d5e0.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true
