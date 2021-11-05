@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Models/characters/character_knightHelmetVisor.obj" type="ArrayMesh" id=1]
 [ext_resource path="res://Models/characters/character_knightArmLeft.obj" type="ArrayMesh" id=2]
@@ -13,10 +13,277 @@
 [sub_resource type="CylinderShape" id=1]
 radius = 0.58094
 
+[sub_resource type="Animation" id=3]
+resource_name = "Idle"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Body/Head:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, -0.0455028, 0 ), Vector3( 0, 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Body/LeftArm:translation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 0.5, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0.049341, 0 ), Vector3( 0, 0, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Body/RightArm:translation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 0.5, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0.049, 0 ), Vector3( 0, 0, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Body/LeftArm:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Body/RightArm:rotation_degrees")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Body:rotation_degrees")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "Run"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Body/RightArm:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( -35.913, 0, 0 ), Vector3( 22.146, 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Body/RightArm:translation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0.0178423, 0.261251 ), Vector3( 0, -0.0168189, -0.246266 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Body/LeftArm:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( -11.5518, -0.409376, 0.0539302 ), Vector3( 5.85415, -1.01115, -0.161291 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Body/LeftArm:translation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( -0.000149223, 0.0571829, 0.114829 ), Vector3( -0.00072617, 0.0406614, -0.12723 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Body/LeftArm/Shield:rotation_degrees")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( -0.011484, 89.8393, -4.62318 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Body/LeftArm/Shield:translation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( 0.439465, 0.364994, 0.0496406 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Body/Head:translation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Body:rotation_degrees")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 8.12, 0, -6.768 ), Vector3( 8.12, 0, 6.768 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "Swing"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/path = NodePath("Body/RightArm:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.1, 0.2, 0.3, 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( -0.303384, 0.0067978, 1.79122e-11 ), Vector3( -0.499863, 0.0112002, 5.19971e-12 ), Vector3( -0.299439, 0.0178264, -0.445902 ), Vector3( -0.761523, 0.0726805, -0.134085 ), Vector3( 0, 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Body/RightArm:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.1, 0.2, 0.3, 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( -0.903332, -3.55706, -25.9232 ), Vector3( -1.82658, -4.97245, -37.7532 ), Vector3( 38.3301, -33.9025, -36.817 ), Vector3( 40.7741, 41.4082, -50.8386 ), Vector3( 0, 0, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Body/RightArm/Weapon:translation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.1, 0.2, 0.3, 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( -0.46109, 0.283041, 0.0555555 ), Vector3( -0.46109, 0.283041, 0.0555552 ), Vector3( -0.46109, 0.283041, 0.0555552 ), Vector3( -0.46109, 0.283041, 0.0555555 ), Vector3( -0.46109, 0.283041, 0.0555555 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Body/RightArm/Weapon:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.1, 0.2, 0.3, 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0.866325, 88.7859, 71.0192 ), Vector3( -3.85706, 45.4141, 77.6984 ), Vector3( 15.3596, 50.6431, 85.6011 ), Vector3( 22.4177, 45.1415, 61.3844 ), Vector3( 22.418, 90, 61.384 ) ]
+}
+
+[sub_resource type="AnimationNodeAnimation" id=7]
+animation = "Run"
+
+[sub_resource type="AnimationNodeAnimation" id=8]
+animation = "Swing"
+
+[sub_resource type="AnimationNodeAnimation" id=9]
+animation = "Run"
+
+[sub_resource type="AnimationNodeAnimation" id=10]
+animation = "Idle"
+
+[sub_resource type="AnimationNodeAdd2" id=6]
+
+[sub_resource type="AnimationNodeAdd2" id=11]
+
+[sub_resource type="AnimationNodeAdd2" id=12]
+
+[sub_resource type="AnimationNodeTimeSeek" id=13]
+
 [sub_resource type="AnimationNodeBlendTree" id=2]
-graph_offset = Vector2( 0, 103.5 )
+graph_offset = Vector2( -625.433, 196.5 )
+nodes/Animation/node = SubResource( 10 )
+nodes/Animation/position = Vector2( -420, -20 )
+"nodes/Animation 2/node" = SubResource( 7 )
+"nodes/Animation 2/position" = Vector2( -420, 100 )
+"nodes/Animation 3/node" = SubResource( 8 )
+"nodes/Animation 3/position" = Vector2( -580, 220 )
+"nodes/Animation 4/node" = SubResource( 9 )
+"nodes/Animation 4/position" = Vector2( -420, 380 )
+nodes/Attack/node = SubResource( 6 )
+nodes/Attack/position = Vector2( -200, 280 )
+nodes/Final/node = SubResource( 11 )
+nodes/Final/position = Vector2( 138.567, 108.75 )
+nodes/Movement/node = SubResource( 12 )
+nodes/Movement/position = Vector2( -200, 0 )
+nodes/SwingReset/node = SubResource( 13 )
+nodes/SwingReset/position = Vector2( -380, 220 )
+nodes/output/position = Vector2( 340, 100 )
+node_connections = [ "output", 0, "Final", "Final", 0, "Movement", "Final", 1, "Attack", "Movement", 0, "Animation", "Movement", 1, "Animation 2", "SwingReset", 0, "Animation 3", "Attack", 0, "SwingReset", "Attack", 1, "Animation 4" ]
 
 [node name="Player" type="KinematicBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 script = ExtResource( 9 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
@@ -24,6 +291,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.964361, 0 )
 shape = SubResource( 1 )
 
 [node name="Body" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 mesh = ExtResource( 7 )
 material/0 = null
 material/1 = null
@@ -39,13 +307,14 @@ material/0 = null
 material/1 = null
 
 [node name="RightArm" type="MeshInstance" parent="Body"]
+transform = Transform( 0.999999, 0, 0, 0, 1, 0, 0, 0, 0.999998, 0, 0, 0 )
 mesh = ExtResource( 4 )
 material/0 = null
 material/1 = null
 material/2 = null
 
 [node name="Weapon" type="MeshInstance" parent="Body/RightArm"]
-transform = Transform( -4.37053e-08, 7.27017e-10, 1, 0.8271, 0.562054, 3.57401e-08, -0.562054, 0.8271, -2.51661e-08, -0.46109, 0.283041, 0.0555552 )
+transform = Transform( 0.334776, 0.182648, 0.924425, 0.811505, 0.442743, -0.38136, -0.478936, 0.877851, -4.04079e-08, -0.46109, 0.283041, 0.0555555 )
 mesh = ExtResource( 5 )
 material/0 = null
 material/1 = null
@@ -53,19 +322,21 @@ material/2 = null
 material/3 = null
 
 [node name="LeftArm" type="MeshInstance" parent="Body"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0362633, 0 )
 mesh = ExtResource( 2 )
 material/0 = null
 material/1 = null
 material/2 = null
 
 [node name="Shield" type="MeshInstance" parent="Body/LeftArm"]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.439183, 0.371568, 0.000667691 )
+transform = Transform( 0.00281221, 2.6323e-05, 0.999996, -0.0806021, 0.996746, 0.000200434, -0.996742, -0.0806024, 0.00280518, 0.439465, 0.364994, 0.0496406 )
 mesh = ExtResource( 6 )
 material/0 = null
 material/1 = null
 material/2 = null
 
 [node name="Head" type="MeshInstance" parent="Body"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0334424, 0 )
 mesh = ExtResource( 3 )
 material/0 = null
 material/1 = null
@@ -77,7 +348,19 @@ material/0 = null
 material/1 = null
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/Idle = SubResource( 3 )
+anims/Run = SubResource( 4 )
+anims/Swing = SubResource( 5 )
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource( 2 )
 anim_player = NodePath("../AnimationPlayer")
+active = true
+parameters/Attack/add_amount = 0.0
+parameters/Final/add_amount = 1.0
+parameters/Movement/add_amount = 0.0
+parameters/SwingReset/seek_position = -1.0
+
+[node name="AttackTimer" type="Timer" parent="."]
+
+[connection signal="timeout" from="AttackTimer" to="." method="_on_AttackTimer_timeout"]
