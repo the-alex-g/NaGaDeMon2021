@@ -217,6 +217,7 @@ material/0 = null
 material/1 = null
 
 [node name="Shield" type="MeshInstance" parent="Body/LeftArm"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.3, -0.2, 0 )
 skeleton = NodePath("../../..")
 
 [node name="RightArm" type="MeshInstance" parent="Body"]

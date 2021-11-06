@@ -4,7 +4,7 @@ extends KinematicBody
 # signals
 
 # enums
-enum MOVEMENT {PATROL, CHASE, CATCH_UP}
+enum MOVEMENT {PATROL, CHASE}
 
 # constants
 const DIRECTIONS := [0, PI/2, PI, PI*1.5]
@@ -13,6 +13,7 @@ const DIRECTIONS := [0, PI/2, PI, PI*1.5]
 export var speed := 2
 export var health := 15
 export var damage_dealt := 10
+export var armor := 0.0
 
 # variables
 var _ignore
@@ -38,7 +39,7 @@ func _physics_process(delta:float)->void:
 		if collision != null:
 			rotation.y = DIRECTIONS[randi()%4]
 	
-	if _movement != MOVEMENT.CHASE:
+	if _movement == MOVEMENT.PATROL:
 		var bodies_within_range:Array = _sight_range.get_overlapping_bodies()
 		for body in bodies_within_range:
 			if body is Player:
