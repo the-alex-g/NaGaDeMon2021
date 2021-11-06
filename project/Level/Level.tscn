@@ -1,19 +1,39 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Models/obj/tileBrickA_large.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://MeshLib.tres" type="MeshLibrary" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Level/Level.gd" type="Script" id=3]
+[ext_resource path="res://Objects/Torch.tscn" type="PackedScene" id=4]
 
 [node name="Spatial" type="Spatial"]
 script = ExtResource( 3 )
 
-[node name="MeshInstance" type="MeshInstance" parent="."]
-mesh = ExtResource( 1 )
-material/0 = null
-material/1 = null
-
 [node name="Player" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.34193, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1375, 1.40008, 0 )
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( -1, -7.57103e-08, 4.37114e-08, 0, 0.5, 0.866025, -8.74228e-08, 0.866025, -0.5, 0, 7.44223, -1.64494 )
+
+[node name="Torch" parent="." instance=ExtResource( 4 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.9, 4, 5.8 )
+
+[node name="Torch2" parent="." instance=ExtResource( 4 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7.848, 4, -1 )
+
+[node name="Torch4" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 5.75696, 4, 2.9034 )
+
+[node name="Torch5" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 5.8, 4, -4.811 )
+
+[node name="Torch3" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9, 4, -7.8 )
+
+[node name="GridMap" type="GridMap" parent="."]
+mesh_library = ExtResource( 1 )
+data = {
+"cells": PoolIntArray( 1, 0, 1441805, 65531, 0, 1441805, 0, 1, 4, 65532, 1, 4, 65534, 1, 4, 0, 2, 13, 1, 2, 1441808, 65531, 2, 655376, 65532, 2, 13, 65534, 2, 655369, 1, 65532, 16, 65531, 65532, 1048592, 65533, 65532, 655373, 65535, 65532, 655373, 0, 65533, 4, 65532, 65533, 4, 65534, 65533, 4, 1, 65534, 1441805, 65531, 65534, 1441805, 0, 65535, 4, 65532, 65535, 4, 65534, 65535, 4 )
+}
+__meta__ = {
+"_editor_clip_": 0
+}

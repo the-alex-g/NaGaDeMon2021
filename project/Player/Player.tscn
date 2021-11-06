@@ -280,10 +280,9 @@ nodes/Movement/position = Vector2( -200, 0 )
 nodes/SwingReset/node = SubResource( 13 )
 nodes/SwingReset/position = Vector2( -380, 220 )
 nodes/output/position = Vector2( 340, 100 )
-node_connections = [ "output", 0, "Final", "Final", 0, "Movement", "Final", 1, "Attack", "Movement", 0, "Animation", "Movement", 1, "Animation 2", "SwingReset", 0, "Animation 3", "Attack", 0, "SwingReset", "Attack", 1, "Animation 4" ]
+node_connections = [ "output", 0, "Final", "Final", 0, "Movement", "Final", 1, "Attack", "Movement", 0, "Animation", "Movement", 1, "Animation 2", "Attack", 0, "SwingReset", "Attack", 1, "Animation 4", "SwingReset", 0, "Animation 3" ]
 
 [node name="Player" type="KinematicBody"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 script = ExtResource( 9 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
@@ -291,7 +290,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.964361, 0 )
 shape = SubResource( 1 )
 
 [node name="Body" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 mesh = ExtResource( 7 )
 material/0 = null
 material/1 = null
@@ -322,7 +320,7 @@ material/2 = null
 material/3 = null
 
 [node name="LeftArm" type="MeshInstance" parent="Body"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0362633, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0149562, 0 )
 mesh = ExtResource( 2 )
 material/0 = null
 material/1 = null
@@ -336,7 +334,7 @@ material/1 = null
 material/2 = null
 
 [node name="Head" type="MeshInstance" parent="Body"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0334424, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0250522, 0 )
 mesh = ExtResource( 3 )
 material/0 = null
 material/1 = null

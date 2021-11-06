@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Models/obj/torchWall.obj" type="ArrayMesh" id=1]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_color = Color( 1, 0.701961, 0, 1 )
+
+[sub_resource type="CubeMesh" id=2]
+material = SubResource( 1 )
+size = Vector3( 0.1, 0.1, 0.1 )
+
+[sub_resource type="Curve" id=3]
+_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 0.327273 ), 0.0, 0.0, 0, 0 ]
+
+[node name="Torch" type="MeshInstance"]
+mesh = ExtResource( 1 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+
+[node name="CPUParticles" type="CPUParticles" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0094409, 0.727826, 0.592755 )
+amount = 12
+preprocess = 1.0
+mesh = SubResource( 2 )
+emission_shape = 1
+emission_sphere_radius = 0.1
+gravity = Vector3( 0, 1, 0 )
+scale_amount_curve = SubResource( 3 )
+
+[node name="DirectionalLight" type="OmniLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.772542, 0.621507 )
+light_energy = 2.0
