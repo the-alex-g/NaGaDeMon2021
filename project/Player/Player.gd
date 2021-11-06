@@ -15,14 +15,18 @@ export var speed := 8
 var _ignore
 var _attacking := false
 var _is_moving := false
+var _damage := 10
 
 # onready variables
 onready var _animations := $AnimationTree
 onready var _attack_timer := $AttackTimer
+onready var _sword_hit_area := $SwordHitArea
+onready var _damage_timer := $DamageTimer
 
 
 func _ready()->void:
 	_attack_timer.wait_time = $AnimationPlayer.get_animation("Swing").length
+	_damage_timer.wait_time = _attack_timer.wait_time/2
 
 
 func _physics_process(delta:float)->void:
@@ -39,6 +43,7 @@ func _physics_process(delta:float)->void:
 		_attacking = true
 		_animations.set("parameters/SwingReset/seek_position", 0)
 		_attack_timer.start()
+		_damage_timer.start()
 	
 	if velocity != Vector2.ZERO:
 		_is_moving = true
@@ -68,3 +73,10 @@ func _set_animation()->void:
 
 func _on_AttackTimer_timeout()->void:
 	_attacking = false
+
+
+func _on_DamageTimer_timeout()->void:
+	var overlapping_bodies:Array = _sword_hit_area.get_overlapping_bodies()
+	for body in overlapping_bodies:
+		if body.has_method("damage"):
+			body.damage(_damage)

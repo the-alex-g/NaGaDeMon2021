@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://MeshLib.tres" type="MeshLibrary" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Level/Level.gd" type="Script" id=3]
 [ext_resource path="res://Objects/Torch.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Skeletons/Minion/Minion.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Objects/Pot.tscn" type="PackedScene" id=6]
 
 [node name="Spatial" type="Spatial"]
 script = ExtResource( 3 )
@@ -41,3 +42,6 @@ __meta__ = {
 
 [node name="Skeleton" parent="." instance=ExtResource( 5 )]
 transform = Transform( 0.0701221, 0, 0.997538, 0, 1, 0, -0.997538, 0, 0.0701221, -3.10857, 1.34391, -2.16866 )
+
+[node name="Pot" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.26513, 0 )
