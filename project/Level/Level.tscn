@@ -14,7 +14,7 @@ script = ExtResource( 3 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1375, 1.40008, 0 )
 
 [node name="Camera" type="Camera" parent="."]
-transform = Transform( -1, -7.57104e-08, 4.37114e-08, 0, 0.5, 0.866025, -8.74228e-08, 0.866025, -0.5, -2.64592, 7.44223, -3.51307 )
+transform = Transform( -1, -7.57104e-08, 4.37114e-08, 0, 0.5, 0.866025, -8.74228e-08, 0.866025, -0.5, -2.64592, 11.3342, -6.27531 )
 
 [node name="Torch" parent="." instance=ExtResource( 4 )]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.9, 4, 5.8 )

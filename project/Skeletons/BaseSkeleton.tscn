@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Models/characters/Skeletons/Minion/character_skeleton_minion_jaw.obj" type="ArrayMesh" id=1]
 [ext_resource path="res://Models/characters/Skeletons/Minion/character_skeleton_minion_body.obj" type="ArrayMesh" id=2]
@@ -189,7 +189,10 @@ nodes/Seek/position = Vector2( 88.1086, 252.391 )
 nodes/Walk/node = SubResource( 9 )
 nodes/Walk/position = Vector2( 40, 60 )
 nodes/output/position = Vector2( 440, 160 )
-node_connections = [ "output", 0, "Add2", "Add2", 0, "Walk", "Add2", 1, "Seek", "Seek", 0, "Animation" ]
+node_connections = [ "output", 0, "Add2", "Seek", 0, "Animation", "Add2", 0, "Walk", "Add2", 1, "Seek" ]
+
+[sub_resource type="CylinderShape" id=10]
+radius = 9.5
 
 [node name="Skeleton" type="KinematicBody"]
 script = ExtResource( 7 )
@@ -217,14 +220,14 @@ material/1 = null
 skeleton = NodePath("../../..")
 
 [node name="RightArm" type="MeshInstance" parent="Body"]
-transform = Transform( 0.998967, -0.00496997, 0.0451621, -0.00496995, 0.976081, 0.217349, -0.0451621, -0.217349, 0.975049, -0.205, 0.5, 0 )
+transform = Transform( 0.998967, -0.00496993, 0.0451622, -0.00496996, 0.976081, 0.217348, -0.0451621, -0.217348, 0.975049, -0.205, 0.5, 0 )
 mesh = ExtResource( 6 )
 skeleton = NodePath("../..")
 material/0 = null
 material/1 = null
 
 [node name="Weapon" type="MeshInstance" parent="Body/RightArm"]
-transform = Transform( 0.207397, -0.71301, 0.669779, 0.978253, 0.149075, -0.14422, 0.00298283, 0.685124, 0.728421, -0.173477, -0.316552, -2.23517e-08 )
+transform = Transform( 0.207398, -0.71301, 0.669779, 0.978253, 0.149075, -0.14422, 0.00298254, 0.685124, 0.72842, -0.173477, -0.316552, -2.23517e-08 )
 mesh = ExtResource( 3 )
 skeleton = NodePath("../../..")
 material/0 = null
@@ -255,3 +258,13 @@ anim_player = NodePath("../AnimationPlayer")
 active = true
 parameters/Add2/add_amount = 0
 parameters/Seek/seek_position = 1.0
+
+[node name="SightRange" type="Area" parent="."]
+
+[node name="CollisionShape" type="CollisionShape" parent="SightRange"]
+shape = SubResource( 10 )
+
+[node name="RayCast" type="RayCast" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.59718, 0 )
+enabled = true
+cast_to = Vector3( 0, 0, -9.5 )

@@ -5,7 +5,7 @@ extends Spatial
 # enums
 
 # constants
-const CAMERA_DISTANCE_FROM_PLAYER := Vector3(0,5,-2)
+const CAMERA_DISTANCE_FROM_PLAYER := Vector3(0,10,-4)
 
 # exported variables
 
