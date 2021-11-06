@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/character_skeleton_minion_armRight.obj-f7e191df0c40af380a0a10ff99764c36.mesh"
+
+[deps]
+
+files=[ "res://.import/character_skeleton_minion_armRight.obj-f7e191df0c40af380a0a10ff99764c36.mesh" ]
+
+source_file="res://Models/characters/Skeletons/Minion/character_skeleton_minion_armRight.obj"
+dest_files=[ "res://.import/character_skeleton_minion_armRight.obj-f7e191df0c40af380a0a10ff99764c36.mesh", "res://.import/character_skeleton_minion_armRight.obj-f7e191df0c40af380a0a10ff99764c36.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

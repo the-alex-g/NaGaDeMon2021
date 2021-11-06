@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/character_skeleton_archer_head_broken.obj-35b4f6703c1c02d2f4e0e63c2bd4f7e4.mesh"
+
+[deps]
+
+files=[ "res://.import/character_skeleton_archer_head_broken.obj-35b4f6703c1c02d2f4e0e63c2bd4f7e4.mesh" ]
+
+source_file="res://Models/characters/Skeletons/Archer/character_skeleton_archer_head_broken.obj"
+dest_files=[ "res://.import/character_skeleton_archer_head_broken.obj-35b4f6703c1c02d2f4e0e63c2bd4f7e4.mesh", "res://.import/character_skeleton_archer_head_broken.obj-35b4f6703c1c02d2f4e0e63c2bd4f7e4.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

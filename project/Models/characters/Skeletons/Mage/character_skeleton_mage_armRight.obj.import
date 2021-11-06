@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/character_skeleton_mage_armRight.obj-a99fae91b1659ca40dc110f5ffe0b94c.mesh"
+
+[deps]
+
+files=[ "res://.import/character_skeleton_mage_armRight.obj-a99fae91b1659ca40dc110f5ffe0b94c.mesh" ]
+
+source_file="res://Models/characters/Skeletons/Mage/character_skeleton_mage_armRight.obj"
+dest_files=[ "res://.import/character_skeleton_mage_armRight.obj-a99fae91b1659ca40dc110f5ffe0b94c.mesh", "res://.import/character_skeleton_mage_armRight.obj-a99fae91b1659ca40dc110f5ffe0b94c.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

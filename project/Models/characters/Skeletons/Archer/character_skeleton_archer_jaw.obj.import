@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/character_skeleton_archer_jaw.obj-39b2780c8b4cda9399a6fa785904e145.mesh"
+
+[deps]
+
+files=[ "res://.import/character_skeleton_archer_jaw.obj-39b2780c8b4cda9399a6fa785904e145.mesh" ]
+
+source_file="res://Models/characters/Skeletons/Archer/character_skeleton_archer_jaw.obj"
+dest_files=[ "res://.import/character_skeleton_archer_jaw.obj-39b2780c8b4cda9399a6fa785904e145.mesh", "res://.import/character_skeleton_archer_jaw.obj-39b2780c8b4cda9399a6fa785904e145.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

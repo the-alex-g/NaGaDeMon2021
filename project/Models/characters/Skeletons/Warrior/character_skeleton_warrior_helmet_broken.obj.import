@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/character_skeleton_warrior_helmet_broken.obj-2105ccb4f221580e8c8fe9a9f3e176ff.mesh"
+
+[deps]
+
+files=[ "res://.import/character_skeleton_warrior_helmet_broken.obj-2105ccb4f221580e8c8fe9a9f3e176ff.mesh" ]
+
+source_file="res://Models/characters/Skeletons/Warrior/character_skeleton_warrior_helmet_broken.obj"
+dest_files=[ "res://.import/character_skeleton_warrior_helmet_broken.obj-2105ccb4f221580e8c8fe9a9f3e176ff.mesh", "res://.import/character_skeleton_warrior_helmet_broken.obj-2105ccb4f221580e8c8fe9a9f3e176ff.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

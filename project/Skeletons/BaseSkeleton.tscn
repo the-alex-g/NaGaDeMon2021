@@ -1,0 +1,70 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Models/characters/Skeletons/Minion/character_skeleton_minion_jaw.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://Models/characters/Skeletons/Minion/character_skeleton_minion_body.obj" type="ArrayMesh" id=2]
+[ext_resource path="res://Models/obj/sword_common.obj" type="ArrayMesh" id=3]
+[ext_resource path="res://Models/characters/Skeletons/Minion/character_skeleton_minion_head.obj" type="ArrayMesh" id=4]
+[ext_resource path="res://Models/characters/Skeletons/Minion/character_skeleton_minion_armLeft.obj" type="ArrayMesh" id=5]
+[ext_resource path="res://Models/characters/Skeletons/Minion/character_skeleton_minion_armRight.obj" type="ArrayMesh" id=6]
+[ext_resource path="res://Skeletons/Enemy.gd" type="Script" id=7]
+
+[sub_resource type="CylinderShape" id=1]
+
+[sub_resource type="AnimationNodeBlendTree" id=2]
+
+[node name="Skeleton" type="KinematicBody"]
+script = ExtResource( 7 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 1 )
+
+[node name="Body" type="MeshInstance" parent="."]
+mesh = ExtResource( 2 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+
+[node name="LeftArm" type="MeshInstance" parent="Body"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.214, 0.5, 0 )
+mesh = ExtResource( 5 )
+skeleton = NodePath("../..")
+material/0 = null
+material/1 = null
+
+[node name="Shield" type="MeshInstance" parent="Body/LeftArm"]
+skeleton = NodePath("../../..")
+
+[node name="RightArm" type="MeshInstance" parent="Body"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.205, 0.5, 0 )
+mesh = ExtResource( 6 )
+skeleton = NodePath("../..")
+material/0 = null
+material/1 = null
+
+[node name="Weapon" type="MeshInstance" parent="Body/RightArm"]
+transform = Transform( -4.37114e-08, 0, 1, 0.921328, 0.388786, 4.02725e-08, -0.388786, 0.921328, -1.69944e-08, -0.173477, -0.316552, 0 )
+mesh = ExtResource( 3 )
+skeleton = NodePath("../../..")
+material/0 = null
+material/1 = null
+material/2 = null
+
+[node name="Head" type="MeshInstance" parent="Body"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.708476, 0 )
+mesh = ExtResource( 4 )
+skeleton = NodePath("../..")
+material/0 = null
+material/1 = null
+
+[node name="Jaw" type="MeshInstance" parent="Body/Head"]
+transform = Transform( 1, 0, 0, 0, 0.944583, -0.328273, 0, 0.328273, 0.944583, 0, 0.176521, 0.0653001 )
+mesh = ExtResource( 1 )
+skeleton = NodePath("../../..")
+material/0 = null
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource( 2 )
+anim_player = NodePath("../AnimationPlayer")
