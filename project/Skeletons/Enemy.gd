@@ -10,7 +10,7 @@ enum MOVEMENT {PATROL, CHASE, CATCH_UP}
 const DIRECTIONS := [0, PI/2, PI, PI*1.5]
 
 # exported variables
-export var speed := 1
+export var speed := 2
 export var health := 15
 export var damage_dealt := 10
 
@@ -52,7 +52,8 @@ func _physics_process(delta:float)->void:
 			var vector := target_position-get_global_transform().origin
 			look_at(target_position, Vector3.UP)
 			rotation.y += PI
-			_ignore = move_and_collide(vector)
+			vector = vector.normalized()
+			_ignore = move_and_collide(vector*delta*speed)
 		else:
 			_movement = MOVEMENT.PATROL
 
