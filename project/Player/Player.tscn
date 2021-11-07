@@ -324,7 +324,7 @@ material/2 = null
 material/3 = null
 
 [node name="LeftArm" type="MeshInstance" parent="Body"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.00023745, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0337179, 0 )
 mesh = ExtResource( 2 )
 material/0 = null
 material/1 = null
@@ -338,7 +338,7 @@ material/1 = null
 material/2 = null
 
 [node name="Head" type="MeshInstance" parent="Body"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0031566, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.031095, 0 )
 mesh = ExtResource( 3 )
 material/0 = null
 material/1 = null
