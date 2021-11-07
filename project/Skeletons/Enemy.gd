@@ -15,6 +15,7 @@ export var health := 15
 export var damage_dealt := 10
 export var armor := 0.0
 export var attack_delay := 1.5
+export var ranged := false
 
 # variables
 var _ignore
@@ -54,18 +55,19 @@ func _physics_process(delta:float)->void:
 	
 	if _movement == MOVEMENT.CHASE:
 		if _can_see(_target):
-			var target_position:Vector3 = _target.get_global_transform().origin
-			var vector := target_position-get_global_transform().origin
-			look_at(target_position, Vector3.UP)
-			rotation.y += PI
-			vector = vector.normalized()
-			_ignore = move_and_collide(vector*delta*speed)
-			if _target is Player and not _attacking:
-				if _hit_area.overlaps_body(_target):
-					$AttackTimer.start()
-					$DamageTimer.start()
-					_attacking = true
-					_animations.set("parameters/Seek/seek_position", 0)
+			if not ranged:
+				var target_position:Vector3 = _target.get_global_transform().origin
+				var vector := target_position-get_global_transform().origin
+				look_at(target_position, Vector3.UP)
+				rotation.y += PI
+				vector = vector.normalized()
+				_ignore = move_and_collide(vector*delta*speed)
+				if _target is Player and not _attacking:
+					if _hit_area.overlaps_body(_target):
+						_attack()
+			
+			else: # if ranged
+				if not _attacking: _attack()
 		else:
 			_movement = MOVEMENT.PATROL
 			_target = null
@@ -80,6 +82,16 @@ func _can_see(object:Spatial)->bool:
 		return true
 	else:
 		return false
+
+
+func _attack()->void:
+	_attacking = true
+	$AttackTimer.start()
+	if has_method("_unique_attack"):
+		call("_unique_attack")
+	else:
+		$DamageTimer.start()
+		_animations.set("parameters/Seek/seek_position", 0)
 
 
 func damage(damage:int)->void:

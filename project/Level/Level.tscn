@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://MeshLib.tres" type="MeshLibrary" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Skeletons/Minion/Minion.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Objects/Pot.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Level/HUD.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Skeletons/Archer/Archer.tscn" type="PackedScene" id=8]
 
 [node name="Main" type="Spatial"]
 script = ExtResource( 3 )
@@ -50,6 +51,9 @@ transform = Transform( 0.0701221, 0, 0.997538, 0, 1, 0, -0.997538, 0, 0.0701221,
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.26513, 0 )
 
 [node name="HUD" parent="." instance=ExtResource( 7 )]
+
+[node name="Skeleton2" parent="." instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.25191, 1.53092, 0 )
 
 [connection signal="update_camera_rotation" from="." to="Player" method="_on_Main_update_camera_rotation"]
 [connection signal="damaged" from="Player" to="." method="_on_Player_damaged"]

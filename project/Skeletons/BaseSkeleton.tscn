@@ -20,7 +20,6 @@ extents = Vector3( 1, 0.354267, 0.451519 )
 
 [sub_resource type="Animation" id=5]
 resource_name = "Attack"
-length = 0.4
 tracks/0/type = "value"
 tracks/0/path = NodePath("Body/Head/Jaw:rotation_degrees")
 tracks/0/interp = 1
@@ -28,10 +27,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.2, 0.3 ),
-"transitions": PoolRealArray( 0.138696, 0.138696, 1 ),
+"times": PoolRealArray( 0, 0.9 ),
+"transitions": PoolRealArray( 0.138696, 1 ),
 "update": 0,
-"values": [ Vector3( 19.164, 0, 0 ), Vector3( 51.5708, -8.85228, -3.03457 ), Vector3( -4.75705, 4.97497, -1.03983 ) ]
+"values": [ Vector3( 19.164, 0, 0 ), Vector3( -4.75705, 4.97497, -1.03983 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Body/RightArm:rotation_degrees")
@@ -40,10 +39,10 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.4 ),
+"times": PoolRealArray( 0, 0.1, 0.7, 1 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector3( 15.6252, -17.2076, -37.0528 ), Vector3( 40.1795, 12.1685, -74.1222 ), Vector3( 48.0546, 109.474, -54.6819 ), Vector3( 0, 0, 0 ) ]
+"values": [ Vector3( 15.6252, -17.2076, -37.0528 ), Vector3( -70.7288, -90.5028, 59.8082 ), Vector3( -70.7288, -90.5028, 59.8082 ), Vector3( 0, 0, 0 ) ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("Body/RightArm/Weapon:rotation_degrees")
@@ -52,10 +51,22 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.1, 0.4 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.1, 0.7, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector3( 11.244, 88.96, 49.09 ), Vector3( 8.29209, 42.5984, 81.3354 ), Vector3( 11.2439, 88.9601, 49.0902 ) ]
+"values": [ Vector3( 11.244, 88.96, 49.09 ), Vector3( -24.2418, 108.133, 82.7284 ), Vector3( -24.2418, 108.133, 82.7284 ), Vector3( 11.2439, 88.9601, 49.0902 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Body/RightArm/Weapon:translation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.1, 0.7 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( -0.173477, -0.316552, 1.19209e-07 ), Vector3( -0.173477, -0.316552, 1.19209e-07 ) ]
 }
 
 [sub_resource type="Animation" id=3]
@@ -119,6 +130,30 @@ tracks/4/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Vector3( 8.29209, 42.5984, 81.3354 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Body/RightArm/Weapon:translation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( -0.173477, -0.316552, 1.19209e-07 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Body/RightArm:translation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( -0.205, 0.5, 0 ) ]
 }
 
 [sub_resource type="Animation" id=4]
@@ -195,7 +230,7 @@ nodes/Seek/position = Vector2( 88.1086, 252.391 )
 nodes/Walk/node = SubResource( 9 )
 nodes/Walk/position = Vector2( 40, 60 )
 nodes/output/position = Vector2( 440, 160 )
-node_connections = [ "output", 0, "Add2", "Seek", 0, "Animation", "Add2", 0, "Walk", "Add2", 1, "Seek" ]
+node_connections = [ "output", 0, "Add2", "Add2", 0, "Walk", "Add2", 1, "Seek", "Seek", 0, "Animation" ]
 
 [node name="Skeleton" type="KinematicBody"]
 script = ExtResource( 7 )
@@ -231,7 +266,7 @@ material/0 = null
 material/1 = null
 
 [node name="Weapon" type="MeshInstance" parent="Body/RightArm"]
-transform = Transform( 0.207398, -0.71301, 0.669779, 0.978253, 0.149075, -0.14422, 0.00298254, 0.685124, 0.72842, -0.173477, -0.316552, -2.23517e-08 )
+transform = Transform( 0.207398, -0.71301, 0.669779, 0.978253, 0.149075, -0.14422, 0.00298254, 0.685124, 0.72842, -0.173477, -0.316552, 1.19209e-07 )
 mesh = ExtResource( 3 )
 skeleton = NodePath("../../..")
 material/0 = null
