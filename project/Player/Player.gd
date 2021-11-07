@@ -16,6 +16,7 @@ var _ignore
 var _attacking := false
 var _is_moving := false
 var _damage := 10
+var _camera_rotation_y := 0.0
 
 # onready variables
 onready var _animations := $AnimationTree
@@ -53,11 +54,14 @@ func _physics_process(delta:float)->void:
 	_set_animation()
 	
 	velocity = velocity.normalized()
+	velocity = velocity.rotated(deg2rad(-1*_camera_rotation_y))
 	velocity *= speed*delta
 	_ignore = move_and_collide(Vector3(velocity.x, 0, velocity.y))
+	
 	var mouse_position := get_viewport().get_mouse_position()-SCREEN_SIZE/2
 	var position_to_look_at := Vector3(mouse_position.x, 0, mouse_position.y)
 	look_at(position_to_look_at, Vector3.UP)
+	rotation_degrees.y += _camera_rotation_y
 
 
 func _set_animation()->void:
@@ -84,3 +88,7 @@ func _on_DamageTimer_timeout()->void:
 
 func damage(damage_taken:int)->void:
 	print("ouch")
+
+
+func _on_Main_update_camera_rotation(new_rotation_y:float)->void:
+	_camera_rotation_y = new_rotation_y

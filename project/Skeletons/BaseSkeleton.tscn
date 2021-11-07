@@ -259,7 +259,7 @@ shape = SubResource( 10 )
 [node name="HitArea" type="Area" parent="."]
 
 [node name="CollisionShape" type="CollisionShape" parent="HitArea"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.513755, 1.12466 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.513755, 0.92051 )
 shape = SubResource( 11 )
 
 [node name="RayCast" type="RayCast" parent="."]
