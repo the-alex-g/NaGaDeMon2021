@@ -2,6 +2,7 @@ class_name Player
 extends KinematicBody
 
 # signals
+signal damaged(current_health)
 
 # enums
 
@@ -17,6 +18,7 @@ var _attacking := false
 var _is_moving := false
 var _damage := 10
 var _camera_rotation_y := 0.0
+var _health := 100
 
 # onready variables
 onready var _animations := $AnimationTree
@@ -87,7 +89,8 @@ func _on_DamageTimer_timeout()->void:
 
 
 func damage(damage_taken:int)->void:
-	print("ouch")
+	_health -= damage_taken
+	emit_signal("damaged", _health)
 
 
 func _on_Main_update_camera_rotation(new_rotation_y:float)->void:

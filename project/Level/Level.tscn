@@ -52,3 +52,4 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.26513, 0 )
 [node name="HUD" parent="." instance=ExtResource( 7 )]
 
 [connection signal="update_camera_rotation" from="." to="Player" method="_on_Main_update_camera_rotation"]
+[connection signal="damaged" from="Player" to="." method="_on_Player_damaged"]
