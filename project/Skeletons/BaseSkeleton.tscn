@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Models/characters/Skeletons/Minion/character_skeleton_minion_jaw.obj" type="ArrayMesh" id=1]
 [ext_resource path="res://Models/characters/Skeletons/Minion/character_skeleton_minion_body.obj" type="ArrayMesh" id=2]
@@ -11,6 +11,12 @@
 [sub_resource type="CylinderShape" id=1]
 radius = 0.653606
 height = 1.43882
+
+[sub_resource type="CylinderShape" id=10]
+radius = 9.5
+
+[sub_resource type="BoxShape" id=11]
+extents = Vector3( 1, 0.354267, 0.451519 )
 
 [sub_resource type="Animation" id=5]
 resource_name = "Attack"
@@ -179,7 +185,7 @@ animation = "Attack"
 animation = "Walk"
 
 [sub_resource type="AnimationNodeBlendTree" id=2]
-graph_offset = Vector2( -127.5, 194.696 )
+graph_offset = Vector2( -187.738, 131 )
 nodes/Add2/node = SubResource( 6 )
 nodes/Add2/position = Vector2( 200, 120 )
 nodes/Animation/node = SubResource( 7 )
@@ -190,9 +196,6 @@ nodes/Walk/node = SubResource( 9 )
 nodes/Walk/position = Vector2( 40, 60 )
 nodes/output/position = Vector2( 440, 160 )
 node_connections = [ "output", 0, "Add2", "Seek", 0, "Animation", "Add2", 0, "Walk", "Add2", 1, "Seek" ]
-
-[sub_resource type="CylinderShape" id=10]
-radius = 9.5
 
 [node name="Skeleton" type="KinematicBody"]
 script = ExtResource( 7 )
@@ -221,7 +224,7 @@ transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.3, -0
 skeleton = NodePath("../../..")
 
 [node name="RightArm" type="MeshInstance" parent="Body"]
-transform = Transform( 0.998967, -0.00496993, 0.0451622, -0.00496996, 0.976081, 0.217348, -0.0451621, -0.217348, 0.975049, -0.205, 0.5, 0 )
+transform = Transform( 0.998967, -0.00496993, 0.0451621, -0.00496996, 0.976081, 0.217348, -0.0451621, -0.217348, 0.975049, -0.205, 0.5, 0 )
 mesh = ExtResource( 6 )
 skeleton = NodePath("../..")
 material/0 = null
@@ -248,6 +251,22 @@ mesh = ExtResource( 1 )
 skeleton = NodePath("../../..")
 material/0 = null
 
+[node name="SightRange" type="Area" parent="."]
+
+[node name="CollisionShape" type="CollisionShape" parent="SightRange"]
+shape = SubResource( 10 )
+
+[node name="HitArea" type="Area" parent="."]
+
+[node name="CollisionShape" type="CollisionShape" parent="HitArea"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.513755, 1.12466 )
+shape = SubResource( 11 )
+
+[node name="RayCast" type="RayCast" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.59718, 0 )
+enabled = true
+cast_to = Vector3( 0, 0, -9.5 )
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/Attack = SubResource( 5 )
 anims/RESET = SubResource( 3 )
@@ -257,15 +276,15 @@ anims/Walk = SubResource( 4 )
 tree_root = SubResource( 2 )
 anim_player = NodePath("../AnimationPlayer")
 active = true
-parameters/Add2/add_amount = 0
-parameters/Seek/seek_position = 1.0
+parameters/Add2/add_amount = 1.0
+parameters/Seek/seek_position = -1.0
 
-[node name="SightRange" type="Area" parent="."]
+[node name="AttackTimer" type="Timer" parent="."]
+one_shot = true
 
-[node name="CollisionShape" type="CollisionShape" parent="SightRange"]
-shape = SubResource( 10 )
+[node name="DamageTimer" type="Timer" parent="."]
+wait_time = 0.2
+one_shot = true
 
-[node name="RayCast" type="RayCast" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.59718, 0 )
-enabled = true
-cast_to = Vector3( 0, 0, -9.5 )
+[connection signal="timeout" from="AttackTimer" to="." method="_on_AttackTimer_timeout"]
+[connection signal="timeout" from="DamageTimer" to="." method="_on_DamageTimer_timeout"]

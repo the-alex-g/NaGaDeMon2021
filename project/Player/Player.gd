@@ -80,3 +80,7 @@ func _on_DamageTimer_timeout()->void:
 	for body in overlapping_bodies:
 		if body.has_method("damage"):
 			body.damage(_damage)
+
+
+func damage(damage_taken:int)->void:
+	print("ouch")

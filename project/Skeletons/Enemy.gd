@@ -14,19 +14,24 @@ export var speed := 2
 export var health := 15
 export var damage_dealt := 10
 export var armor := 0.0
+export var attack_delay := 1.5
 
 # variables
 var _ignore
 var _movement = MOVEMENT.PATROL
 var _target:Spatial
+var _attacking := false
 
 # onready
 onready var _sight_range := $SightRange
 onready var _ray_cast := $RayCast
+onready var _hit_area := $HitArea
+onready var _animations := $AnimationTree
 
 
 func _ready()->void:
 	rotation.y = DIRECTIONS[randi()%4]
+	$AttackTimer.wait_time = attack_delay
 
 
 func _physics_process(delta:float)->void:
@@ -55,8 +60,17 @@ func _physics_process(delta:float)->void:
 			rotation.y += PI
 			vector = vector.normalized()
 			_ignore = move_and_collide(vector*delta*speed)
+			if _target is Player and not _attacking:
+				if _hit_area.overlaps_body(_target):
+					$AttackTimer.start()
+					$DamageTimer.start()
+					_attacking = true
+					_animations.set("parameters/Seek/seek_position", 0)
 		else:
 			_movement = MOVEMENT.PATROL
+			_target = null
+	
+	_animations.set("parameters/Add2/add_amount", 1 if _attacking else 0)
 
 
 func _can_see(object:Spatial)->bool:
@@ -72,3 +86,13 @@ func damage(damage:int)->void:
 	health -= damage
 	if health <= 0:
 		queue_free()
+
+
+func _on_AttackTimer_timeout()->void:
+	_attacking = false
+
+
+func _on_DamageTimer_timeout()->void:
+	if _target is Player:
+		if _hit_area.overlaps_body(_target):
+			_target.damage(damage_dealt)
