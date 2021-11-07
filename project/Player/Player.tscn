@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://Models/characters/Helmets/character_knightHelmetVisor.obj" type="ArrayMesh" id=1]
 [ext_resource path="res://Models/characters/Knight/character_knightArmLeft.obj" type="ArrayMesh" id=2]
@@ -88,6 +88,33 @@ tracks/5/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Vector3( 0, 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=15]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Body/RightArm:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( -0.761523, 0.0726805, 0.13055 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Body/RightArm:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( 40.7741, 41.4082, -50.8386 ) ]
 }
 
 [sub_resource type="Animation" id=4]
@@ -192,7 +219,7 @@ tracks/7/keys = {
 
 [sub_resource type="Animation" id=5]
 resource_name = "Swing"
-length = 0.6
+length = 0.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("Body/RightArm:translation")
 tracks/0/interp = 1
@@ -200,10 +227,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0.1, 0.2, 0.3, 0.4, 0.6 ),
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.5 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector3( -0.303384, 0.0067978, 1.79122e-11 ), Vector3( -0.499863, 0.0112002, 5.19971e-12 ), Vector3( -0.299439, 0.0178264, -0.445902 ), Vector3( -0.761523, 0.0726805, -0.134085 ), Vector3( 0, 0, 0 ) ]
+"values": [ Vector3( -0.303384, 0.0067978, 1.79122e-11 ), Vector3( -0.499863, 0.0112002, 5.19971e-12 ), Vector3( -0.299439, 0.0178264, -0.445902 ), Vector3( -0.761523, 0.0726805, 0.299107 ), Vector3( 0, 0, 0 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Body/RightArm:rotation_degrees")
@@ -212,10 +239,10 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0.1, 0.2, 0.3, 0.4, 0.6 ),
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.5 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector3( -0.903332, -3.55706, -25.9232 ), Vector3( -1.82658, -4.97245, -37.7532 ), Vector3( 38.3301, -33.9025, -36.817 ), Vector3( 40.7741, 41.4082, -50.8386 ), Vector3( 0, 0, 0 ) ]
+"values": [ Vector3( -0.903332, -3.55706, -25.9232 ), Vector3( -1.82658, -4.97245, -37.7532 ), Vector3( 38.3301, -33.9025, -36.817 ), Vector3( 40.7741, 68.6192, -50.8386 ), Vector3( 0, 0, 0 ) ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("Body/RightArm/Weapon:translation")
@@ -224,7 +251,7 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0.1, 0.2, 0.3, 0.4, 0.6 ),
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.5 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector3( -0.46109, 0.283041, 0.0555555 ), Vector3( -0.46109, 0.283041, 0.0555552 ), Vector3( -0.46109, 0.283041, 0.0555552 ), Vector3( -0.46109, 0.283041, 0.0555555 ), Vector3( -0.46109, 0.283041, 0.0555555 ) ]
@@ -236,7 +263,7 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0.1, 0.2, 0.3, 0.4, 0.6 ),
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.5 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector3( 0.866325, 88.7859, 71.0192 ), Vector3( -3.85706, 45.4141, 77.6984 ), Vector3( 15.3596, 50.6431, 85.6011 ), Vector3( 22.4177, 45.1415, 61.3844 ), Vector3( 22.418, 90, 61.384 ) ]
@@ -309,7 +336,7 @@ material/0 = null
 material/1 = null
 
 [node name="RightArm" type="MeshInstance" parent="Body"]
-transform = Transform( 0.999999, 0, 0, 0, 1, 0, 0, 0, 0.999998, 0, 0, 0 )
+transform = Transform( 0.138713, 0.854325, 0.500885, -0.58718, 0.478234, -0.653077, -0.797482, -0.20352, 0.567979, -0.761523, 0.0726805, 0.13055 )
 mesh = ExtResource( 4 )
 material/0 = null
 material/1 = null
@@ -324,7 +351,7 @@ material/2 = null
 material/3 = null
 
 [node name="LeftArm" type="MeshInstance" parent="Body"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0337179, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0245304, 0 )
 mesh = ExtResource( 2 )
 material/0 = null
 material/1 = null
@@ -338,7 +365,7 @@ material/1 = null
 material/2 = null
 
 [node name="Head" type="MeshInstance" parent="Body"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.031095, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0320839, 0 )
 mesh = ExtResource( 3 )
 material/0 = null
 material/1 = null
@@ -357,6 +384,7 @@ material/1 = null
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/Idle = SubResource( 3 )
+anims/RESET = SubResource( 15 )
 anims/Run = SubResource( 4 )
 anims/Swing = SubResource( 5 )
 
