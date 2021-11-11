@@ -9,6 +9,11 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "KinematicBody",
+"class": "Ammo",
+"language": "GDScript",
+"path": "res://Projectiles/Ammo.gd"
+}, {
 "base": "StaticBody",
 "class": "Destroyable",
 "language": "GDScript",
@@ -25,6 +30,7 @@ _global_script_classes=[ {
 "path": "res://Player/Player.gd"
 } ]
 _global_script_class_icons={
+"Ammo": "",
 "Destroyable": "",
 "Enemy": "",
 "Player": ""

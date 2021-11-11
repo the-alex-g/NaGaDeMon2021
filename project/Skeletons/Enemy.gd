@@ -55,11 +55,11 @@ func _physics_process(delta:float)->void:
 	
 	if _movement == MOVEMENT.CHASE:
 		if _can_see(_target):
+			var target_position:Vector3 = _target.get_global_transform().origin
+			var vector := target_position-get_global_transform().origin
+			look_at(target_position, Vector3.UP)
+			rotation.y += PI
 			if not ranged:
-				var target_position:Vector3 = _target.get_global_transform().origin
-				var vector := target_position-get_global_transform().origin
-				look_at(target_position, Vector3.UP)
-				rotation.y += PI
 				vector = vector.normalized()
 				_ignore = move_and_collide(vector*delta*speed)
 				if _target is Player and not _attacking:
@@ -87,11 +87,11 @@ func _can_see(object:Spatial)->bool:
 func _attack()->void:
 	_attacking = true
 	$AttackTimer.start()
+	_animations.set("parameters/Seek/seek_position", 0)
 	if has_method("_unique_attack"):
 		call("_unique_attack")
 	else:
 		$DamageTimer.start()
-		_animations.set("parameters/Seek/seek_position", 0)
 
 
 func damage(damage:int)->void:

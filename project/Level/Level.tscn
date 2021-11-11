@@ -18,7 +18,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1375, 1.40008, 0 )
 [node name="CameraRotationPoint" type="Position3D" parent="."]
 
 [node name="Camera" type="Camera" parent="CameraRotationPoint"]
-transform = Transform( -1, -7.57104e-08, 4.37114e-08, 0, 0.5, 0.866025, -8.74228e-08, 0.866025, -0.5, 0, 10, -4 )
+transform = Transform( -1, 7.57103e-08, -4.37114e-08, 0, 0.5, 0.866025, 8.74228e-08, 0.866025, -0.5, 0, 10, -4 )
 
 [node name="Torch" parent="." instance=ExtResource( 4 )]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.718485, 4, 3.71227 )
@@ -52,7 +52,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.26513, 0 )
 
 [node name="HUD" parent="." instance=ExtResource( 7 )]
 
-[node name="Skeleton2" parent="." instance=ExtResource( 8 )]
+[node name="Archer" parent="." instance=ExtResource( 8 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.25191, 1.53092, 0 )
 
 [connection signal="update_camera_rotation" from="." to="Player" method="_on_Main_update_camera_rotation"]
