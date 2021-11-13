@@ -1,6 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Level/HUD.gd" type="Script" id=1]
+[ext_resource path="res://crossbow_rare.png" type="Texture" id=2]
+[ext_resource path="res://axeDouble_rare.png" type="Texture" id=3]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 1, 0, 0, 1 )
@@ -26,6 +28,18 @@ corner_radius_top_right = 3
 corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.105882, 0.105882, 0.105882, 1 )
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color( 0.376471, 0.376471, 0.376471, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource( 1 )
 
@@ -34,9 +48,9 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = -50.0
-margin_top = -24.0
-margin_right = 50.0
+margin_left = -123.0
+margin_top = -36.0
+margin_right = 123.0
 margin_bottom = -10.0
 custom_styles/fg = SubResource( 1 )
 custom_styles/bg = SubResource( 2 )
@@ -46,3 +60,42 @@ percent_visible = false
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Panel1" type="Panel" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 200.0
+margin_top = -139.0
+margin_right = 329.0
+margin_bottom = -10.0
+custom_styles/panel = SubResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Weapon1" type="TextureRect" parent="Panel1"]
+margin_right = 129.0
+margin_bottom = 129.0
+texture = ExtResource( 3 )
+stretch_mode = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel2" type="Panel" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 10.0
+margin_top = -139.0
+margin_right = 139.0
+margin_bottom = -10.0
+custom_styles/panel = SubResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Weapon2" type="TextureRect" parent="Panel2"]
+margin_right = 129.0
+margin_bottom = 129.0
+texture = ExtResource( 2 )
+stretch_mode = 4
