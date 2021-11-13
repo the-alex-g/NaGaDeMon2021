@@ -22,7 +22,6 @@ func _physics_process(delta:float)->void:
 	direction *= speed*delta
 	var collision := move_and_collide(direction)
 	if collision != null:
-		if collision.collider == Player: print("YAY")
-		if (good and collision.collider is Enemy) or (not good and collision.collider is Player):
+		if (good and collision.collider is Enemy) or (not good and collision.collider.has_method("damage")):
 			collision.collider.damage(damage)
 		queue_free()

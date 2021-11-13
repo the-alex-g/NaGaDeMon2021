@@ -23,7 +23,7 @@ func _ready()->void:
 		_mesh.mesh = load(path_to_mesh)
 
 
-func damage(_damage:int)->void:
+func damage(_damage:int, _bypass_armor:bool, _reduce_armor:bool)->void:
 	if has_method("_drop"):
 		call("_drop")
 	queue_free()

@@ -94,7 +94,13 @@ func _attack()->void:
 		$DamageTimer.start()
 
 
-func damage(damage:int)->void:
+func damage(damage:int, reduce_armor:bool, bypass_armor:bool)->void:
+	if reduce_armor and armor > 0.0:
+		armor -= 0.1
+		if armor < 0.0:
+			armor = 0.0
+	damage *= 1.0 if bypass_armor else (1.0-armor)
+	print(str(damage))
 	health -= damage
 	if health <= 0:
 		queue_free()
