@@ -7,7 +7,7 @@ extends KinematicBody
 enum MOVEMENT {PATROL, CHASE}
 
 # constants
-const DIRECTIONS := [0, PI/2, PI, PI*1.5]
+const DIRECTIONS := [0, 0.25*TAU, 0.5*TAU, 0.75*TAU]
 
 # exported variables
 export var speed := 2
@@ -58,7 +58,7 @@ func _physics_process(delta:float)->void:
 			var target_position:Vector3 = _target.get_global_transform().origin
 			var vector := target_position-get_global_transform().origin
 			look_at(target_position, Vector3.UP)
-			rotation.y += PI
+			rotation.y += 0.5*TAU
 			if not ranged:
 				vector = vector.normalized()
 				_ignore = move_and_collide(vector*delta*speed)
